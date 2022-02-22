@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Introl", "Introl\Introl.csproj", "{BC4A56DE-C406-4579-B281-176E36FCF70C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Introl.Demo", "Introl.Demo\Introl.Demo.csproj", "{59C9EDAB-25F7-481C-BCD1-85C4AA9685A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC4A56DE-C406-4579-B281-176E36FCF70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC4A56DE-C406-4579-B281-176E36FCF70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC4A56DE-C406-4579-B281-176E36FCF70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC4A56DE-C406-4579-B281-176E36FCF70C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C9EDAB-25F7-481C-BCD1-85C4AA9685A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C9EDAB-25F7-481C-BCD1-85C4AA9685A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C9EDAB-25F7-481C-BCD1-85C4AA9685A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C9EDAB-25F7-481C-BCD1-85C4AA9685A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD745728-C4F4-4197-B0E2-0A5D0BD823ED}
+	EndGlobalSection
+EndGlobal
