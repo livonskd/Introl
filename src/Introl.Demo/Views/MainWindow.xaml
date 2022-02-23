@@ -2,6 +2,296 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Introl.Demo"
+        Background="{DynamicResource BackgroundFillBrush}"
         Width="1350"
         Height="810">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Foreground"
+                    Value="{DynamicResource OnSurfaceHighBrush}" />
+            <Setter Property="Height"
+                    Value="30" />
+            <Setter Property="Padding"
+                    Value="10,0,0,0" />
+            <Setter Property="VerticalContentAlignment"
+                    Value="Center" />
+        </Style>
+    </Window.Resources>
+    <StackPanel Orientation="Horizontal"
+                Margin="4">
+        <!--#region Color -->
+        <StackPanel Width="520"
+                    Margin="4">
+            <!--#region Color: Fill -->
+            <Grid Margin="0,0,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="Primary Fill"
+                       Background="{DynamicResource PrimaryFillBrush}"
+                       Foreground="{DynamicResource OnPrimaryHighBrush}"
+                       Grid.Column="0" />
+                <Label Content="Primary Fill"
+                       Background="{DynamicResource PrimaryFillDisabledBrush}"
+                       Foreground="{DynamicResource OnSurfaceDisabledBrush}"
+                       Grid.Column="1" />
+                <Label Content="Surface Fill Overlay"
+                       Background="{DynamicResource SurfaceFillOverlayBrush}"
+                       Grid.Column="2" />
+                <Label Content="Background Fill"
+                       Background="{DynamicResource BackgroundFillBrush}"
+                       Grid.Column="0"
+                       Grid.Row="1" />
+                <Label Content="Surface Fill"
+                       Background="{DynamicResource SurfaceFillBrush}"
+                       Grid.Column="1"
+                       Grid.Row="1" />
+                <Label Content="Error Fill"
+                       Background="{DynamicResource ErrorFillBrush}"
+                       Foreground="{DynamicResource OnPrimaryHighBrush}"
+                       Grid.Column="2"
+                       Grid.Row="1" />
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Color: On Primary -->
+            <Grid Background="{DynamicResource PrimaryFillBrush}"
+                  Margin="0,0,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="On Primary"
+                       Foreground="{DynamicResource OnPrimaryHighBrush}"
+                       Grid.Column="0"
+                       Grid.Row="0" />
+
+                <Label Content="High Emphasis"
+                       Background="{DynamicResource OnPrimaryHighBrush}"
+                       Grid.Column="0"
+                       Grid.Row="1" />
+                <Label Content="Medium Emphasis"
+                       Background="{DynamicResource OnPrimaryMediumBrush}"
+                       Grid.Column="1"
+                       Grid.Row="1" />
+                <Label Content="Disabled Emphasis"
+                       Background="{DynamicResource OnPrimaryDisabledBrush}"
+                       Grid.Column="2"
+                       Grid.Row="1" />
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Color: On Surface -->
+            <Grid Background="{DynamicResource SurfaceFillBrush}"
+                  Margin="0,0,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="On Primary"
+                       Grid.Column="0"
+                       Grid.Row="0" />
+
+                <Label Content="High Emphasis"
+                       Background="{DynamicResource OnSurfaceHighBrush}"
+                       Foreground="{DynamicResource OnPrimaryHighBrush}"
+                       Grid.Column="0"
+                       Grid.Row="1" />
+                <Label Content="Medium Emphasis"
+                       Background="{DynamicResource OnSurfaceMediumBrush}"
+                       Foreground="{DynamicResource OnPrimaryHighBrush}"
+                       Grid.Column="1"
+                       Grid.Row="1" />
+                <Label Content="Disabled Emphasis"
+                       Background="{DynamicResource OnSurfaceDisabledBrush}"
+                       Foreground="{DynamicResource OnPrimaryHighBrush}"
+                       Grid.Column="2"
+                       Grid.Row="1" />
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Color: Stroke -->
+            <StackPanel SnapsToDevicePixels="True">
+                <Label Content="Outline"
+                       BorderBrush="{DynamicResource OutlineStrokeBrush}"
+                       BorderThickness="1" />
+                <Label Content="Divider"
+                       BorderBrush="{DynamicResource DividerStrokeBrush}"
+                       BorderThickness="0,0,0,1"
+                       Margin="1,0,0,0" />
+            </StackPanel>
+            <!--#endregion-->
+        </StackPanel>
+        <!--#endregion-->
+
+        <!--#region State -->
+        <StackPanel Margin="4">
+            <StackPanel.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="Foreground"
+                            Value="{DynamicResource OnSurfaceHighBrush}" />
+                    <Setter Property="HorizontalContentAlignment"
+                            Value="Center" />
+                    <Setter Property="VerticalContentAlignment"
+                            Value="Center" />
+                </Style>
+            </StackPanel.Resources>
+
+            <!--#region State: Primary -->
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,8">
+                <Border Background="{DynamicResource PrimaryFillBrush}"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Enabled"
+                           Foreground="{DynamicResource OnPrimaryHighBrush}" />
+                </Border>
+                <Border Background="{DynamicResource PrimaryFillBrush}"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Focus"
+                           Background="{DynamicResource PrimaryStateFocusBrush}"
+                           Foreground="{DynamicResource OnPrimaryHighBrush}" />
+                </Border>
+                <Border Background="{DynamicResource PrimaryFillBrush}"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Hover"
+                           Background="{DynamicResource PrimaryStateHoverBrush}"
+                           Foreground="{DynamicResource OnPrimaryHighBrush}" />
+                </Border>
+                <Border Background="{DynamicResource PrimaryFillBrush}"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Pressed"
+                           Background="{DynamicResource PrimaryStatePressedBrush}"
+                           Foreground="{DynamicResource OnPrimaryHighBrush}" />
+                </Border>
+                <Border Background="{DynamicResource PrimaryFillBrush}"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Selected"
+                           Background="{DynamicResource PrimaryStateSelectedBrush}"
+                           Foreground="{DynamicResource OnPrimaryHighBrush}" />
+                </Border>
+                <Border Background="{DynamicResource PrimaryFillBrush}"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Activated"
+                           Background="{DynamicResource PrimaryStateActivatedBrush}"
+                           Foreground="{DynamicResource OnPrimaryHighBrush}" />
+                </Border>
+                <Border Background="{DynamicResource PrimaryFillDisabledBrush}"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2">
+                    <Label Content="Disabled"
+                           Foreground="{DynamicResource OnSurfaceDisabledBrush}" />
+                </Border>
+            </StackPanel>
+            <!--#endregion-->
+
+            <!--#region State: Surface -->
+            <StackPanel Orientation="Horizontal">
+                <Border Background="{DynamicResource SurfaceFillBrush}"
+                        BorderBrush="{DynamicResource OutlineStrokeBrush}"
+                        BorderThickness="1"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Enabled" />
+                </Border>
+                <Border Background="{DynamicResource SurfaceFillBrush}"
+                        BorderBrush="{DynamicResource OutlineStrokeBrush}"
+                        BorderThickness="1"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Focus"
+                           Background="{DynamicResource SurfaceStateFocusBrush}" />
+                </Border>
+                <Border Background="{DynamicResource SurfaceFillBrush}"
+                        BorderBrush="{DynamicResource OutlineStrokeBrush}"
+                        BorderThickness="1"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Hover"
+                           Background="{DynamicResource SurfaceStateHoverBrush}" />
+                </Border>
+                <Border Background="{DynamicResource SurfaceFillBrush}"
+                        BorderBrush="{DynamicResource OutlineStrokeBrush}"
+                        BorderThickness="1"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Pressed"
+                           Background="{DynamicResource SurfaceStatePressedBrush}" />
+                </Border>
+                <Border Background="{DynamicResource SurfaceFillBrush}"
+                        BorderBrush="{DynamicResource OutlineStrokeBrush}"
+                        BorderThickness="1"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Selected"
+                           Background="{DynamicResource SurfaceStateSelectedBrush}" />
+                </Border>
+                <Border Background="{DynamicResource SurfaceFillBrush}"
+                        BorderBrush="{DynamicResource OutlineStrokeBrush}"
+                        BorderThickness="1"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2"
+                        Margin="0,0,8,0">
+                    <Label Content="Activated"
+                           Background="{DynamicResource PrimaryStateActivatedBrush}" />
+                </Border>
+                <Border Background="{DynamicResource SurfaceFillBrush}"
+                        BorderBrush="{DynamicResource OutlineStrokeBrush}"
+                        BorderThickness="1"
+                        Width="100"
+                        Height="100"
+                        CornerRadius="2">
+                    <Label Content="Disabled"
+                           Foreground="{DynamicResource OnSurfaceDisabledBrush}"/>
+                </Border>
+            </StackPanel>
+            <!--#endregion-->
+        </StackPanel>
+        <!--#endregion-->
+    </StackPanel>
 </Window>

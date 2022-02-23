@@ -1,0 +1,81 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Color: Fill -->
+    <Color x:Key="PrimaryFillColor">#BB86FC</Color>
+    <Color x:Key="PrimaryFillDisabledColor">#1FFFFFFF</Color>
+
+    <Color x:Key="BackgroundFillColor">#121212</Color>
+    <Color x:Key="SurfaceFillColor">#202020</Color>
+    <Color x:Key="SurfaceFillOverlayColor">#1FFFFFFF</Color>
+    <Color x:Key="ErrorFillColor">#CF6679</Color>
+
+
+    <!-- Color: On -->
+    <Color x:Key="OnPrimaryHighColor">#000000</Color>
+    <Color x:Key="OnPrimaryMediumColor">#BD000000</Color>
+    <Color x:Key="OnPrimaryDisabledColor">#61000000</Color>
+
+    <Color x:Key="OnSurfaceHighColor">#DEFFFFFF</Color>
+    <Color x:Key="OnSurfaceMediumColor">#99FFFFFF</Color>
+    <Color x:Key="OnSurfaceDisabledColor">#61FFFFFF</Color>
+
+
+    <!-- Color: Stroke -->
+    <Color x:Key="OutlineStrokeColor">#1FFFFFFF</Color>
+    <Color x:Key="DividerStrokeColor">#1FFFFFFF</Color>
+
+
+    <!-- Color: State -->
+    <Color x:Key="PrimaryStateFocusColor">#3DFFFFFF</Color>
+    <Color x:Key="PrimaryStateHoverColor">#1AFFFFFF</Color>
+    <Color x:Key="PrimaryStatePressedColor">#52FFFFFF</Color>
+    <Color x:Key="PrimaryStateSelectedColor">#29FFFFFF</Color>
+    <Color x:Key="PrimaryStateActivatedColor">#3DFFFFFF</Color>
+
+    <Color x:Key="SurfaceStateFocusColor">#1FFFFFFF</Color>
+    <Color x:Key="SurfaceStateHoverColor">#0AFFFFFF</Color>
+    <Color x:Key="SurfaceStatePressedColor">#29FFFFFF</Color>
+    <Color x:Key="SurfaceStateSelectedColor">#14FFFFFF</Color>
+    <Color x:Key="SurfaceStateActivatedColor">#1FFFFFFF</Color>
+
+
+    <!-- Brush: Fill -->
+    <SolidColorBrush x:Key="PrimaryFillBrush" Color="{DynamicResource PrimaryFillColor}" />
+    <SolidColorBrush x:Key="PrimaryFillDisabledBrush" Color="{DynamicResource PrimaryFillDisabledColor}" />
+
+    <SolidColorBrush x:Key="BackgroundFillBrush" Color="{DynamicResource BackgroundFillColor}" />
+    <SolidColorBrush x:Key="SurfaceFillBrush" Color="{DynamicResource SurfaceFillColor}" />
+    <SolidColorBrush x:Key="SurfaceFillOverlayBrush" Color="{DynamicResource SurfaceFillOverlayColor}" />
+    <SolidColorBrush x:Key="ErrorFillBrush" Color="{DynamicResource ErrorFillColor}" />
+
+
+    <!-- Brush: On -->
+    <SolidColorBrush x:Key="OnPrimaryHighBrush" Color="{DynamicResource OnPrimaryHighColor}" />
+    <SolidColorBrush x:Key="OnPrimaryMediumBrush" Color="{DynamicResource OnPrimaryMediumColor}" />
+    <SolidColorBrush x:Key="OnPrimaryDisabledBrush" Color="{DynamicResource OnPrimaryDisabledColor}" />
+
+    <SolidColorBrush x:Key="OnSurfaceHighBrush" Color="{DynamicResource OnSurfaceHighColor}" />
+    <SolidColorBrush x:Key="OnSurfaceMediumBrush" Color="{DynamicResource OnSurfaceMediumColor}" />
+    <SolidColorBrush x:Key="OnSurfaceDisabledBrush" Color="{DynamicResource OnSurfaceDisabledColor}" />
+
+
+    <!-- Brush: Stroke -->
+    <SolidColorBrush x:Key="OutlineStrokeBrush" Color="{DynamicResource OutlineStrokeColor}" />
+    <SolidColorBrush x:Key="DividerStrokeBrush" Color="{DynamicResource DividerStrokeColor}" />
+
+
+    <!-- Brush: State -->
+    <SolidColorBrush x:Key="PrimaryStateFocusBrush" Color="{DynamicResource PrimaryStateFocusColor}" />
+    <SolidColorBrush x:Key="PrimaryStateHoverBrush" Color="{DynamicResource PrimaryStateHoverColor}" />
+    <SolidColorBrush x:Key="PrimaryStatePressedBrush" Color="{DynamicResource PrimaryStatePressedColor}" />
+    <SolidColorBrush x:Key="PrimaryStateSelectedBrush" Color="{DynamicResource PrimaryStateSelectedColor}" />
+    <SolidColorBrush x:Key="PrimaryStateActivatedBrush" Color="{DynamicResource PrimaryStateActivatedColor}" />
+
+    <SolidColorBrush x:Key="SurfaceStateFocusBrush" Color="{DynamicResource SurfaceStateFocusColor}" />
+    <SolidColorBrush x:Key="SurfaceStateHoverBrush" Color="{DynamicResource SurfaceStateHoverColor}" />
+    <SolidColorBrush x:Key="SurfaceStatePressedBrush" Color="{DynamicResource SurfaceStatePressedColor}" />
+    <SolidColorBrush x:Key="SurfaceStateSelectedBrush" Color="{DynamicResource SurfaceStateSelectedColor}" />
+    <SolidColorBrush x:Key="SurfaceStateActivatedBrush" Color="{DynamicResource SurfaceStateActivatedColor}" />
+
+</ResourceDictionary>
