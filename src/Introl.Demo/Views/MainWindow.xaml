@@ -127,7 +127,8 @@
             <!--#endregion-->
 
             <!--#region Color: Stroke -->
-            <StackPanel SnapsToDevicePixels="True">
+            <StackPanel Margin="0,0,0,30"
+                        SnapsToDevicePixels="True">
                 <Label Content="Outline"
                        BorderBrush="{DynamicResource OutlineStrokeBrush}"
                        BorderThickness="1" />
@@ -136,6 +137,14 @@
                        BorderThickness="0,0,0,1"
                        Margin="1,0,0,0" />
             </StackPanel>
+            <!--#endregion-->
+
+            <!--#region Color: Theming -->
+            <CheckBox Content="Dark Mode"
+                      Click="ThemeChanging_OnClick"
+                      BorderBrush="{DynamicResource OnSurfaceMediumBrush}"
+                      Foreground="{DynamicResource OnSurfaceHighBrush}"
+                      HorizontalAlignment="Center" />
             <!--#endregion-->
         </StackPanel>
         <!--#endregion-->
