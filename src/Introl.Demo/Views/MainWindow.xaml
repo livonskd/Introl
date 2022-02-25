@@ -12,14 +12,21 @@
                     Value="{DynamicResource OnSurfaceHighBrush}" />
             <Setter Property="il:CornerRadiusAssist.CornerRadius"
                     Value="4" />
+            <Setter Property="il:ShadowAssist.Depth"
+                    Value="2" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Label">
-                        <Border Background="{DynamicResource SurfaceFillBrush}"
-                                BorderBrush="{DynamicResource OutlineStrokeBrush}"
-                                BorderThickness="1"
-                                CornerRadius="{TemplateBinding il:CornerRadiusAssist.CornerRadius}"
-                                SnapsToDevicePixels="True" />
+                        <AdornerDecorator>
+                            <AdornerDecorator.Effect>
+                                <MultiBinding Converter="{x:Static il:ShadowConverter.Instance}">
+                                    <Binding Path="(il:ShadowAssist.Depth)" RelativeSource="{RelativeSource TemplatedParent}" />
+                                    <Binding Path="(il:ShadowAssist.Direction)" RelativeSource="{RelativeSource TemplatedParent}" />
+                                </MultiBinding>
+                            </AdornerDecorator.Effect>
+                            <Border Background="{DynamicResource SurfaceFillBrush}"
+                                    CornerRadius="{TemplateBinding il:CornerRadiusAssist.CornerRadius}" />
+                        </AdornerDecorator>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -29,6 +36,8 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
         <Label il:CornerRadiusAssist.CornerRadius="16,2,16,2"
+               il:ShadowAssist.Depth="4"
+               il:ShadowAssist.Direction="Left"
                Width="120"
                Height="120" />
         <Label Width="120"
