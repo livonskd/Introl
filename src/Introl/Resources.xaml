@@ -2,6 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Introl;component/Dimensions.xaml" />
+
+        <ResourceDictionary Source="/Introl;component/Styles/FocusVisual.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

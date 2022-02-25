@@ -6,42 +6,28 @@
         Background="{DynamicResource BackgroundFillBrush}"
         Width="1350"
         Height="810">
-    <Window.Resources>
-        <Style TargetType="Label">
-            <Setter Property="Foreground"
-                    Value="{DynamicResource OnSurfaceHighBrush}" />
-            <Setter Property="il:CornerRadiusAssist.CornerRadius"
-                    Value="4" />
-            <Setter Property="il:ShadowAssist.Depth"
-                    Value="2" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Label">
-                        <AdornerDecorator>
-                            <AdornerDecorator.Effect>
-                                <MultiBinding Converter="{x:Static il:ShadowConverter.Instance}">
-                                    <Binding Path="(il:ShadowAssist.Depth)" RelativeSource="{RelativeSource TemplatedParent}" />
-                                    <Binding Path="(il:ShadowAssist.Direction)" RelativeSource="{RelativeSource TemplatedParent}" />
-                                </MultiBinding>
-                            </AdornerDecorator.Effect>
-                            <Border Background="{DynamicResource SurfaceFillBrush}"
-                                    CornerRadius="{TemplateBinding il:CornerRadiusAssist.CornerRadius}" />
-                        </AdornerDecorator>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
     <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-        <Label il:CornerRadiusAssist.CornerRadius="16,2,16,2"
-               il:ShadowAssist.Depth="4"
-               il:ShadowAssist.Direction="Left"
-               Width="120"
-               Height="120" />
-        <Label Width="120"
-               Height="120"
-               Margin="16,0,0,0" />
+        <Border Background="Orange"
+                FocusVisualStyle="{StaticResource FocusVisualDefault}"
+                Focusable="True"
+                CornerRadius="{StaticResource CornerRadiusDefault}"
+                Width="120"
+                Height="120" />
+        <Border Background="MediumPurple"
+                FocusVisualStyle="{StaticResource FocusVisualDefault}"
+                Focusable="True"
+                CornerRadius="{StaticResource CornerRadiusDefault}"
+                Width="120"
+                Height="120"
+                Margin="16,0"/>
+        <Border Background="Chartreuse"
+                FocusVisualStyle="{StaticResource FocusVisualDefault}"
+                Focusable="True"
+                CornerRadius="{StaticResource CornerRadiusDefault}"
+                il:CornerRadiusAssist.CornerRadius="12"
+                Width="120"
+                Height="120" />
     </StackPanel>
 </Window>
