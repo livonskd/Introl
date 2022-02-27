@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:asst="clr-namespace:Introl.Assists">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Introl;component/Dimensions.xaml" />
+        <ResourceDictionary Source="/Introl;component/Styles/FocusVisual.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--#region Style: ControlBase -->
+    <Style x:Key="ControlBase"
+           TargetType="Control">
+        <Setter Property="FocusVisualStyle"
+                Value="{StaticResource FocusVisualDefault}" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource OnSurfaceHighBrush}" />
+        <Setter Property="asst:CornerRadiusAssist.CornerRadius"
+                Value="{StaticResource CornerRadiusDefault}" />
+    </Style>
+    <!--#endregion-->
+
+</ResourceDictionary>

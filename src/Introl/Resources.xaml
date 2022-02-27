@@ -4,6 +4,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Introl;component/Dimensions.xaml" />
 
+        <ResourceDictionary Source="/Introl;component/Styles/Base.xaml" />
         <ResourceDictionary Source="/Introl;component/Styles/FocusVisual.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
